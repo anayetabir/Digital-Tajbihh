@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvCount;
     Button buttonAdd,buttonSub,buttonReset;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                count++;
+                tvCount.setText(""+count);
+
 
             }
         });
@@ -37,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                count--;
+                tvCount.setText(""+count);
 
             }
         });
@@ -46,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                count=0;
+                tvCount.setText(""+count);
 
             }
         });
